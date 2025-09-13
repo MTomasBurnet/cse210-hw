@@ -1,19 +1,23 @@
-using System; 
+using System;
 using System.Collections.Generic;
+using promptgenerator;
+
+namespace entry;
 
 public class Entry
 {
     string _prompt;
     string _input;
-    List<string> _dateAndTime = new List<string>();
+    string _dateAndTime;
 
     public Entry()
     {
     }
 
-    public void PutName(string prompt)
+    public void PutPrompt(string promt)
     {
-        _prompt = prompt;
+        _prompt = promt;
+        Console.WriteLine(_prompt);
     }
 
     public void PutInput(string input)
@@ -21,8 +25,23 @@ public class Entry
         _input = input;
     }
 
-    public void PutDateAndTimer(List<string> dateTime)
+    public void PutDateAndTimer(string dateTime)
     {
         _dateAndTime = dateTime;
+    }
+
+    public string GetPrompt()
+    {
+        return _prompt;
+    }
+
+    public string GetImput()
+    {
+        return _input;
+    }
+
+    public string GetDateAndTimer()
+    {
+        return _dateAndTime;
     }
 }
